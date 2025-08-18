@@ -44,7 +44,7 @@ vi /etc/config/byedpi
 ```sh
 config byedpi
     option enabled '1'
-    option options '-o 2 --split-tls=2 --fake-sni=www.google.com -d 4'
+    option options '-o 2 --auto=t,r,a,s -d 2'
 ```
 
 ⚠️ Подберите параметры под своего провайдера (см. [ByeByeDPI](https://github.com/ValdikSS/ByeDPI) или ByeDPI Manager).
