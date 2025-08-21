@@ -18,8 +18,7 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 Замените `aarch64_cortex-a53` на свою архитектуру:
 
 ```sh
-cd /tmp
-curl -LO https://github.com/spvkgn/ByeDPI-OpenWrt/releases/download/v0.17-24.10/byedpi_0.17-r1_aarch64_cortex-a53.ipk
+(cd /tmp && curl -LO https://github.com/spvkgn/ByeDPI-OpenWrt/releases/download/v0.17-24.10/byedpi_0.17-r1_aarch64_cortex-a53.ipk)
 ```
 
 ### 3. Установите пакет
@@ -47,7 +46,7 @@ config byedpi
     option options '-o 2 --auto=t,r,a,s -d 2'
 ```
 
-⚠️ Подберите параметры под своего провайдера (см. [ByeByeDPI](https://github.com/ValdikSS/ByeDPI) или ByeDPI Manager).
+⚠️ Подберите параметры под своего провайдера (см. [ByeByeDPI](https://github.com/romanvht/ByeByeDPI) или [ByeDPI Manager](https://github.com/romanvht/ByeDPIManager)).
 
 ### 5. Включите сервис
 
