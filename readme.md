@@ -18,7 +18,7 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 Замените `aarch64_cortex-a53` на свою архитектуру:
 
 ```sh
-(cd /tmp && curl -LO https://github.com/spvkgn/ByeDPI-OpenWrt/releases/download/v0.17-24.10/byedpi_0.17-r1_aarch64_cortex-a53.ipk)
+(cd /tmp && curl -LO https://github.com/DPITrickster/ByeDPI-OpenWrt/releases/download/v0.17.2-24.10/byedpi_0.17.2-r1_aarch64_cortex-a53.ipk)
 ```
 
 ### 3. Установите пакет
