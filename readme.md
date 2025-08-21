@@ -27,7 +27,7 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 
 ```sh
 opkg remove byedpi
-opkg install /tmp/byedpi_0.17-r1_aarch64_cortex-a53.ipk
+opkg install /tmp/byedpi_0.17.2-r1_aarch64_cortex-a53.ipk
 ```
 
 ### 4. Настройте конфиг ByeDPI
@@ -104,4 +104,13 @@ netstat -tulnp | grep 1080
 
 ---
 
-## Вы великолепны 🚀
+#### Вы великолепны 🚀
+
+---
+
+## Большое спасибо
+
+- **[itdoginfo](https://github.com/itdoginfo)** за [podkop](https://github.com/itdoginfo/podkop)
+- **[hufrea](https://github.com/hufrea)** за [byedpi](https://github.com/hufrea/byedpi)
+- **[spvkgn](https://github.com/spvkgn)** за GitHub Actions
+- **[romanvht](https://github.com/romanvht)** за возможность тестировать стратегии
