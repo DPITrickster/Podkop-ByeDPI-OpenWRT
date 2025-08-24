@@ -36,7 +36,7 @@ opkg install /tmp/byedpi_0.17.2-r1_aarch64_cortex-a53.ipk
 #### Откройте файл:
 
 > [!NOTE]
-> В примере используется текстовый редактор `vi`, так как он является предустановленным. Вы можете использовать любой другой редактор.
+> В примере используется текстовый редактор `vi`, так как он является предустановленным.
 
 ```sh
 vi /etc/config/byedpi
@@ -75,9 +75,6 @@ uci commit dhcp
 
 Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`.
 
-> [!NOTE]
-> Подробнее читайте в [документации](https://podkop.net/docs/own-outbound/)
-
 Outbound Configuration:
 
 ```json
@@ -89,7 +86,7 @@ Outbound Configuration:
 ```
 
 > [!NOTE]
-> Если вы изменили порт ByeDPI, замените `1080` на ваш.
+> Не забудьте добавить нужные [списки](https://podkop.net/docs/sections/), с которыми будет взаимодействовать ByeDPI.
 
 ---
 
