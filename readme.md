@@ -119,3 +119,4 @@ netstat -tulnp | grep 1080
 - **[hufrea](https://github.com/hufrea)** за [byedpi](https://github.com/hufrea/byedpi)
 - **[spvkgn](https://github.com/spvkgn)** за GitHub Actions
 - **[romanvht](https://github.com/romanvht)** за возможность тестировать стратегии
+- **[StressOzz](https://github.com/StressOzz)** за [инструкцию](https://github.com/StressOzz/Podkop-ByeByeDPI-OpenWRT)
