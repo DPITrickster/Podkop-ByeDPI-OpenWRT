@@ -1,3 +1,5 @@
+# Основной репозиторий [здесь](https://github.com/StressOzz/Podkop-ByeDPI-OpenWRT)
+
 # Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt.
 
 > [!IMPORTANT]
