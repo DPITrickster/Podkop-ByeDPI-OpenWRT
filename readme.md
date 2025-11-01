@@ -90,18 +90,18 @@ uci commit dhcp
 > [!WARNING]
 > URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер.
 
-> "Сырая" форма записи. Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`. Outbound Configuration:
-
-```json
-{
-  "type": "socks",
-  "server": "127.0.0.1",
-  "server_port": 1080
-}
-```
-
 > [!NOTE]
 > Не забудьте добавить нужные [списки](https://podkop.net/docs/sections/), с которыми будет взаимодействовать ByeDPI.
+
+> Вариант "сырой" формы записи. Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`. Outbound Configuration:
+>
+> ```json
+> {
+>   "type": "socks",
+>   "server": "127.0.0.1",
+>   "server_port": 1080
+> }
+> ```
 
 ---
 
