@@ -1,5 +1,3 @@
-# Основной репозиторий, который будет обновляться при появлении новой информации, [здесь](https://github.com/StressOzz/Podkop-ByeDPI-OpenWRT)
-
 # Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt.
 
 > [!IMPORTANT]
@@ -21,7 +19,7 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 
 ### Скачайте нужный пакет
 
-Замените `aarch64_cortex-a53` на свою архитектуру:
+Замените ссылку на скачивание с учётом архитектуры из последнего [релиза](https://github.com/DPITrickster/ByeDPI-OpenWrt/releases):
 
 ```sh
 (cd /tmp && curl -LO https://github.com/DPITrickster/ByeDPI-OpenWrt/releases/download/v0.17.2-24.10/byedpi_0.17.2-r1_aarch64_cortex-a53.ipk)
@@ -31,6 +29,8 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 
 > [!NOTE]
 > При необходимости удалите старую версию.
+
+Название пакета замените на актуальное
 
 ```sh
 opkg remove byedpi
@@ -42,7 +42,7 @@ opkg install /tmp/byedpi_0.17.2-r1_aarch64_cortex-a53.ipk
 #### Откройте файл:
 
 > [!NOTE]
-> В примере используется текстовый редактор `vi`, так как он является предустановленным.
+> В примере используется текстовый редактор `vi`, так как он является предустановленным. Документацию можно найти [здесь](https://man.archlinux.org/man/vi.1). Можете установить `nano` или любой другой редактор.
 
 ```sh
 vi /etc/config/byedpi
@@ -77,11 +77,20 @@ uci commit dhcp
 
 ## 2. Настройка Podkop
 
-### Добавьте Outbound для ByeDPI
+### Добавьте секцию для ByeDPI
 
-Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`.
+- Тип подключения: `Proxy`
+- Тип конфигурации: `URLTest`
 
-Outbound Configuration:
+> [!NOTE]
+> Если не меняли порт
+  
+- Ссылка прокси для URLTest: `socks5://127.0.0.1:1080#byedpi`
+
+> [!WARNING]
+> URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер.
+
+> "Сырая" форма записи. Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`. Outbound Configuration:
 
 ```json
 {
