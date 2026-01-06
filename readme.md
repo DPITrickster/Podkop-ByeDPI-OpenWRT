@@ -80,28 +80,14 @@ uci commit dhcp
 ### Добавьте секцию для ByeDPI
 
 - Тип подключения: `Proxy`
-- Тип конфигурации: `URLTest`
-
-> [!NOTE]
-> Если не меняли порт
-  
-- Ссылка прокси для URLTest: `socks5://127.0.0.1:1080#byedpi`
+- Тип конфигурации: `Connection URL` (рекомендуется) или `URLTest`  
+- Ссылка прокси для Connection URL или URLTest: `socks5://127.0.0.1:1080#byedpi` (если не меняли порт `1080` на другой)
 
 > [!WARNING]
-> URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер.
+> URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер. Рекомендуется выделять для byedpi отдельную секцию с *Connection URL*.
 
 > [!NOTE]
 > Не забудьте добавить нужные [списки](https://podkop.net/docs/sections/), с которыми будет взаимодействовать ByeDPI.
-
-> Вариант "сырой" формы записи. Тип Outbound'а - `Proxy`. Тип конфигурации - `Outbound Config`. Outbound Configuration:
->
-> ```json
-> {
->   "type": "socks",
->   "server": "127.0.0.1",
->   "server_port": 1080
-> }
-> ```
 
 ---
 
@@ -116,7 +102,7 @@ reboot
 ### Проверьте работу ByeDPI
 
 ```sh
-ps | grep byedpi
+ps | grep ciadpi
 netstat -tulnp | grep 1080
 ```
 
