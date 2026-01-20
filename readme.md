@@ -114,6 +114,6 @@ netstat -tulnp | grep 1080
 
 - **[itdoginfo](https://github.com/itdoginfo)** за [podkop](https://github.com/itdoginfo/podkop)
 - **[hufrea](https://github.com/hufrea)** за [byedpi](https://github.com/hufrea/byedpi)
-- **[spvkgn](https://github.com/spvkgn)** за GitHub Actions
+- **[spvkgn](https://github.com/spvkgn)** за пакет ByeDPI и возможность его сборки
 - **[romanvht](https://github.com/romanvht)** за возможность тестировать стратегии
 - **[StressOzz](https://github.com/StressOzz)** за [инструкцию](https://github.com/StressOzz/Podkop-Manager/blob/main/readme.hand.md)
