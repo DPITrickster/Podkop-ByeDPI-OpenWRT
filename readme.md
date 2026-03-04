@@ -1,4 +1,6 @@
-# Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt.
+# Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt с пакетным менеджером **opkg**.
+
+## [Ссылка](https://github.com/DPITrickster/Podkop-ByeDPI-OpenWRT/blob/main/readme.apk.md) на гайд для OpenWrt с пакетным менеджером **apk**.
 
 > [!IMPORTANT]
 > Если ваш провайдер перехватывает DNS-запросы - требуются меры по их защите, иначе ByeDPI не будет работать.
