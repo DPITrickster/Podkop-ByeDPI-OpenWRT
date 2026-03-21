@@ -22,6 +22,9 @@ awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 
 Замените ссылку на скачивание с учётом архитектуры из последнего [релиза](https://github.com/DPITrickster/ByeDPI-OpenWrt/releases):
 
+> [!WARNING]
+> **Generic Packages** - пакеты, собранные из upstream бинарников. Они могут не полностью соответствовать ABI OpenWrt. Используйте их только, если не нашли пакет, собранный нативно
+
 ```sh
 (cd /tmp && curl -LO https://github.com/DPITrickster/ByeDPI-OpenWrt/releases/download/v0.17.3-v25.12.0/byedpi_0.17.3-r1_aarch64_cortex-a53.apk)
 ```
