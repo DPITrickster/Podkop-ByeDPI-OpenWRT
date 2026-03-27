@@ -14,7 +14,6 @@
 
 ```sh
 apk --print-arch
-uname -m
 awk -F\' '/DISTRIB_ARCH/ {print $2}' /etc/openwrt_release
 ```
 
