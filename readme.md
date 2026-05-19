@@ -71,13 +71,6 @@ config byedpi
 /etc/init.d/byedpi start
 ```
 
-### Для OpenWrt 24.10 отключите использование `dnsmasq` в качестве локального резолвера
-
-```sh
-uci set dhcp.@dnsmasq[0].localuse='0'
-uci commit dhcp
-```
-
 ---
 
 ## 2. Настройка Podkop
@@ -90,6 +83,12 @@ uci commit dhcp
 
 > [!WARNING]
 > URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер. Рекомендуется выделять для byedpi отдельную секцию с *Connection URL*.
+
+> [!CAUTION]
+> Обязательно активируйте опцию [разрешения реальных IP](https://podkop.net/docs/sections/#razreshenie-realnyh-ip-adresov-resolve-real-ip-for-routing) (resolve real IP for routing)!
+> Данная опция доступна с версии podkop **0.7.15**
+
+<img src="byedpi-resolve-real-ip.png" width="500">
 
 > [!NOTE]
 > Не забудьте добавить нужные [списки](https://podkop.net/docs/sections/), с которыми будет взаимодействовать ByeDPI.
