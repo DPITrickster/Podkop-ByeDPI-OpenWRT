@@ -69,13 +69,6 @@ config byedpi
 /etc/init.d/byedpi start
 ```
 
-### Для OpenWrt 24.10 и новее отключите использование `dnsmasq` в качестве локального резолвера
-
-```sh
-uci set dhcp.@dnsmasq[0].localuse='0'
-uci commit dhcp
-```
-
 ---
 
 ## 2. Настройка Podkop
@@ -89,21 +82,19 @@ uci commit dhcp
 > [!WARNING]
 > URLTest может показывать значения для byedpi гораздо бóльшие, чем для прокси или VPN, поэтому весь трафик может пойти не в byedpi, а через удалённый сервер. Рекомендуется выделять для byedpi отдельную секцию с *Connection URL*.
 
+> [!CAUTION]
+> Обязательно активируйте опцию [разрешения реальных IP](https://podkop.net/docs/sections/#razreshenie-realnyh-ip-adresov-resolve-real-ip-for-routing) (resolve real IP for routing)!
+> 
+> Данная опция доступна с версии podkop **0.7.15**
+
+<img src="byedpi-resolve-real-ip.png" width="500">
+
 > [!NOTE]
 > Не забудьте добавить нужные [списки](https://podkop.net/docs/sections/), с которыми будет взаимодействовать ByeDPI.
 
 ---
 
 ## 3. Финальные шаги
-
-### Перезагрузите роутер
-
-> [!CAUTION]
-> Перезагрузить роутер обязательно - без этого dnsmasq останется локальным резолвером!
-
-```sh
-reboot
-```
 
 ### Проверьте работу ByeDPI
 
@@ -114,22 +105,10 @@ netstat -tulnp | grep 1080
 
 Если процессы активны — всё работает.
 
-## Примечание
-
-Если указать в `main` секции byedpi, то диагностика будет выглядеть так:
-
-<img src="byedpi-main.png" width="500">
-
-Если **не указывать** byedpi в секции `main` - диагностика будет выгдеть так:
-
-<img src="byedpi-further.png" width="500">
-
-В обоих случаях причин для беспокойства нет: диагностика расчитана на стандартные ситауации и на проверку работы подключений к удалённым серверам. Если всё работает, то обращать внимание на диагностику не следует.
-
 ## Большое спасибо
 
 - **[itdoginfo](https://github.com/itdoginfo)** за [podkop](https://github.com/itdoginfo/podkop)
 - **[hufrea](https://github.com/hufrea)** за [byedpi](https://github.com/hufrea/byedpi)
 - **[spvkgn](https://github.com/spvkgn)** за пакет ByeDPI и возможность его сборки
-- **[romanvht](https://github.com/romanvht)** за возможность тестировать стратегии
+- **[romanvht](https://github.com/romanvht)** за возможность тестировать стратегии и возможность [поучения реального IP](https://github.com/itdoginfo/podkop/pull/361)
 - **[StressOzz](https://github.com/StressOzz)** за [инструкцию](https://github.com/StressOzz/Podkop-Manager/blob/main/readme.hand.md)
