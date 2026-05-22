@@ -1,7 +1,5 @@
 # Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt с пакетным менеджером **opkg**.
 
-## [Ссылка](https://github.com/DPITrickster/Podkop-ByeDPI-OpenWRT/blob/main/readme.apk.md) на гайд для OpenWrt с пакетным менеджером **apk**.
-
 ## 0. Установка Podkop
 
 Вся нужная информация о Podkop находится в [readme](https://github.com/itdoginfo/podkop?tab=readme-ov-file) репозитория и на [сайте](https://podkop.net/) с документацией.
