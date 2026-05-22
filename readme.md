@@ -1,4 +1,6 @@
-# Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt 25.12.
+# Гайд по установке и настройке **Podkop** вместе с **ByeDPI** на OpenWrt 25.12.0 и новее
+
+## [Ссылка](https://github.com/DPITrickster/Podkop-ByeDPI-OpenWRT/blob/main/readme.ipk.md) на гайд для OpenWrt с пакетным менеджером **opkg**.
 
 ## 0. Установка Podkop
 
